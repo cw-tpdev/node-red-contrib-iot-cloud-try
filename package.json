@@ -1,0 +1,30 @@
+{
+  "name": "node-red-contrib-iot-cloud-try",
+  "node-red": {
+    "nodes": {
+      "iotCloudTry": "iotCloudTry.js"
+    }
+  },
+  "version": "0.1.0",
+  "description": "Node-RED nodes for IoT Cloud Try.",
+  "main": "iotCloudTry.js",
+  "scripts": {},
+  "keywords": [
+    "node-red",
+    "IoT Cloud Try",
+    "iotCloudTry"
+  ],
+  "author": {
+    "name": "CO-works",
+    "email": "tp-dev@co-works.co.jp",
+    "url": "https://www.co-works.co.jp/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cw-tpdev/node-red-contrib-iot-cloud-try"
+  },
+  "dependencies": {
+    "request": "*"
+  },
+  "license": "Apache-2.0"
+}

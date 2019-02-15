@@ -1,0 +1,17 @@
+{
+	"iotCloudTry": {
+		"label": {
+			"name": "name",
+			"hostConfig": "Host settings",
+			"itemKey": "item key",
+			"apiKey": "api key",
+			"hostKey": "host key"
+		}
+	},
+	"common": {
+		"name": "name",
+		"sending": "sending",
+		"sendErr": "Sending failed",
+		"sentData": "Sent"
+	}
+}

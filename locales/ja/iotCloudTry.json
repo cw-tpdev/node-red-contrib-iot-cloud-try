@@ -1,0 +1,17 @@
+{
+	"iotCloudTry": {
+		"label": {
+			"name": "名前",
+			"hostConfig": "ホスト設定",
+			"itemKey": "アイテムキー",
+			"apiKey": "APIキー",
+			"hostKey": "ホストキー"
+		}
+	},
+	"common": {
+		"name": "名前",
+		"sending": "送信中",
+		"sendErr": "送信失敗",
+		"sentData": "送信済"
+	}
+}
