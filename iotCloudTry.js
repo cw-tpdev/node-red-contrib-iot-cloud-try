@@ -1,6 +1,6 @@
 module.exports = function (RED) {
 
-    var request = require("request");
+    var request = require("requestretry");
 
     function IctConfig(n) {
         RED.nodes.createNode(this, n);
@@ -49,7 +49,11 @@ module.exports = function (RED) {
                 method: 'POST',
                 headers: headers,
                 json: true,
-                body: sendData
+                body: sendData,
+                // request-retry
+                maxAttempts: 5,
+                retryDelay: 1000,
+                retryStrategy: request.RetryStrategies.HTTPOrNetworkError
             };
 
             process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0
@@ -66,7 +70,7 @@ module.exports = function (RED) {
                     } else {
                         sleep(3, function () {
                             node.status({ fill: "red", shape: "dot", text: "common.sendErr" });
-                            
+
                             var errMsg = "";
                             if (response.statusCode == 429) {
                                 //node.error("Too Many Requests.");
@@ -74,7 +78,7 @@ module.exports = function (RED) {
                                 if (response.body.error) {
                                     errMsg = " [" + response.body.error + "]";
                                 }
-                                node.error("Please check the setting." + errMsg);
+                                node.error("Please check the setting.[" + response.statusCode + "]" + errMsg);
                             }
                         });
                     }

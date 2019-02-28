@@ -5,7 +5,7 @@
       "iotCloudTry": "iotCloudTry.js"
     }
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node-RED nodes for IoT Cloud Try.",
   "main": "iotCloudTry.js",
   "scripts": {},
@@ -24,7 +24,8 @@
     "url": "https://github.com/cw-tpdev/node-red-contrib-iot-cloud-try"
   },
   "dependencies": {
-    "request": "*"
+    "requestretry": "*",
+    "request": "2.*.*"
   },
   "license": "Apache-2.0"
 }
